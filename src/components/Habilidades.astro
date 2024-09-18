@@ -1,0 +1,47 @@
+---
+import IconAstro from "../assets/icons/IconAstro.astro";
+import IconCss from "../assets/icons/IconCss.astro";
+import IconDatabase from "../assets/icons/IconDatabase.astro";
+import IconFirebase from "../assets/icons/IconFirebase.astro";
+import IconGithub from "../assets/icons/IconGithub.astro";
+import IconHtml from "../assets/icons/IconHtml.astro";
+import IconJavaScript from "../assets/icons/IconJavaScript.astro";
+import IconLinkendin from "../assets/icons/IconLinkendin.astro";
+import IconPhp from "../assets/icons/IconPhp.astro";
+import IconReact from "../assets/icons/IconReact.astro";
+import IconTailwind from "../assets/icons/IconTailwind.astro";
+import IconVue from "../assets/icons/IconVue.astro";
+---
+
+ <div class="grid md:col-span-3 col-span-8  gap-6">
+   <div class="text-5xl md:p-12 p-6 glass w-full ">
+     <h2 class="font-bold text-center mb-4">Habilidades</h2>
+     <div class="grid grid-cols-4 gap-y-4 gap-x-5 ">
+       <IconHtml class="text-orange-500 hover:scale-110 transition-all duration-200 size-12" ></IconHtml>
+       <IconCss class="text-blue-500 hover:scale-110 transition-all duration-200 size-12"></IconCss>
+       <IconJavaScript class="text-yellow-500 hover:scale-110 transition-all duration-200 size-12"></IconJavaScript>
+       <IconReact class="text-blue-600 hover:scale-110 transition-all duration-200 size-12"/>
+       <IconVue class="text-green-500 hover:scale-110 transition-all duration-200  size-12"/>
+       <IconAstro class="text-orange-500 text-4xl hover:scale-110 transition-all duration-200 size-12" />
+       <IconTailwind class="text-blue-300 hover:scale-110 transition-all duration-200 size-12"></IconTailwind>
+       <IconGithub class="text-white hover:scale-110 transition-all duration-200 size-12"/>
+       <IconPhp class="text-gray-300 hover:scale-110 transition-all duration-200 size-12"></IconPhp>
+       <IconDatabase class="text-blue-700 hover:scale-110 transition-all duration-200 size-12"></IconDatabase>
+       <IconFirebase class="text-yellow-300 hover:scale-110 transition-all duration-200 size-12"></IconFirebase>
+     </div>
+   </div>
+   <div class="text-5xl gap-4 flex justify-center items-center glass text-white p-2 ">
+     <a href="https://github.com/UtopicRay?tab=repositories">
+       <IconGithub class="hover:scale-110 transition-all duration-200 size-14"></IconGithub>
+     </a>
+     <a href="https://www.linkedin.com/in/ray-rendon-mesa-1948b7260?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWGSERolORaigToBCXdkJaQ%3D%3D">
+       <IconLinkendin class="hover:scale-110 transition-all duration-200 size-14"></IconLinkendin>
+     </a>
+   </div>
+ </div>
+
+<style>
+.skill-icon{
+  @apply size-12;
+}
+</style>
