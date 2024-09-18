@@ -1,0 +1,60 @@
+---
+import {SiVuetify } from "react-icons/si";
+import IconHtml from "../assets/icons/IconHtml.astro";
+import Programador from "../assets/img/Programador.gif";
+import {Image} from "astro:assets";
+import IconCss from "../assets/icons/IconCss.astro";
+import IconJavaScript from "../assets/icons/IconJavaScript.astro";
+import IconGithub from "../assets/icons/IconGithub.astro";
+import IconVue from "../assets/icons/IconVue.astro";
+import IconReact from "../assets/icons/IconReact.astro";
+import IconPhp from "../assets/icons/IconPhp.astro";
+import IconDatabase from "../assets/icons/IconDatabase.astro";
+import Info from "./Info.astro";
+---
+<div
+      class="max-w-[1200px] grid md:grid-cols-2 grid-cols-1 mx-auto text-left gap-8 mb-40"
+      id="experiencia"
+    >
+      <ol class="relative border-s border-gray-200 dark:border-gray-700">
+          <Info job="PROGRAMADOR WEB" institution="Ministerio de Relaciones Exteriores"
+          time="2024-Actualidad"
+          description={`Encargado de la creación de aplicaciones web escalables y de alto
+          rendimiento utilizando tecnologías frontend como son Vue.js y
+          Vuetify. Especializado en el desarrollo de interfaces de usuario
+          intuitivas y responsivas para diversos servicios empresariales.`}
+          >
+          <IconHtml class="text-orange-500 hover:scale-110 transition-all  duration-200 size-10 "/>
+          <IconCss class="text-blue-500 hover:scale-110 transition-all duration-200 size-10"/>
+          <IconJavaScript class="text-yellow-500 hover:scale-110 transition-all duration-200 size-10"/>
+          <IconGithub class="text-white hover:scale-110 transition-all duration-200 size-10"/>
+          <IconVue class=" text-green-500  hover:scale-110 transition-all duration-200 size-10"/>
+          <SiVuetify class="text-blue-500 hover:scale-110 transition-all duration-200 size-10"/>
+          </Info>
+
+          <Info job="PRACTICANTE DE DESARROLLO" institution="Universidad de Ciencias Informática" time="2021 -2023"
+          description={`En el centro SeoWebMas asociado a la universidad, me especialice en
+          la implementación de vistas, clases y funcionalidades en bases de
+          datos. Durante ese periodo desarrolle una herramienta de búsqueda
+          que mejoro los productos recomendados a los clientes mejorando así
+          su experiencia.`}>
+          <IconHtml class="text-orange-500 hover:scale-110 transition-all  duration-200 size-10"></IconHtml>
+          <IconCss class="text-blue-500 hover:scale-110 transition-all duration-200 size-10"></IconCss>
+          <IconJavaScript class="text-yellow-500 hover:scale-110 transition-all duration-200 size-10"></IconJavaScript>
+          <IconReact class="text-blue-600 hover:scale-110 transition-all duration-200 size-10"></IconReact>
+          <IconGithub class="text-white hover:scale-110 transition-all duration-200 size-10"></IconGithub>
+          <IconPhp class="text-gray-300 hover:scale-110 transition-all duration-200 size-10"></IconPhp>
+          <IconDatabase class="text-blue-700 hover:scale-110 transition-all duration-200 size-10"></IconDatabase>
+          </Info>
+      </ol>
+      <div class="relative group">
+        <div class="absolute -inset-1 place-items-center  w-full bg-gradient-to-r from-purple-100 to-orange-500 rounded-lg backdrop-blur-lg blur opacity-25 group-hover:opacity-100 transition-all duration-200"></div>
+        <div class="relative p-4 h-full bg-white bg-opacity-25 backdrop-blur-lg rounded-lg">
+          <Image
+            class="h-full rounded-lg w-full"
+            src={Programador}
+            alt="foto de proyecto"
+          ></Image>
+        </div>
+      </div>
+    </div>
