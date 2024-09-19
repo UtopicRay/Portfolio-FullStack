@@ -10,6 +10,7 @@ import IconVue from "../assets/icons/IconVue.astro";
 import IconReact from "../assets/icons/IconReact.astro";
 import IconPhp from "../assets/icons/IconPhp.astro";
 import IconDatabase from "../assets/icons/IconDatabase.astro";
+import IconSymfony from "../assets/icons/IconSymfony.astro";
 import Info from "./Info.astro";
 ---
 <div
@@ -29,7 +30,7 @@ import Info from "./Info.astro";
           <IconJavaScript class="text-yellow-500 hover:scale-110 transition-all duration-200 size-10"/>
           <IconGithub class="text-white hover:scale-110 transition-all duration-200 size-10"/>
           <IconVue class=" text-green-500  hover:scale-110 transition-all duration-200 size-10"/>
-          <SiVuetify class="text-blue-500 hover:scale-110 transition-all duration-200 size-10"/>
+          <SiVuetify className="text-blue-500 hover:scale-110 transition-all duration-200 size-10" client:visible/>
           </Info>
 
           <Info job="PRACTICANTE DE DESARROLLO" institution="Universidad de Ciencias Informática" time="2021 -2023"
@@ -44,6 +45,7 @@ import Info from "./Info.astro";
           <IconReact class="text-blue-600 hover:scale-110 transition-all duration-200 size-10"></IconReact>
           <IconGithub class="text-white hover:scale-110 transition-all duration-200 size-10"></IconGithub>
           <IconPhp class="text-gray-300 hover:scale-110 transition-all duration-200 size-10"></IconPhp>
+          <IconSymfony class="text-gray-300 hover:scale-110 transition-all duration-200 size-10"/>
           <IconDatabase class="text-blue-700 hover:scale-110 transition-all duration-200 size-10"></IconDatabase>
           </Info>
       </ol>
