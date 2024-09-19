@@ -1,12 +1,14 @@
-import { DiPhp, DiReact } from "react-icons/di";
 import { RiFirebaseFill, RiTailwindCssFill } from "react-icons/ri";
+import { DiReact, DiPhp } from "react-icons/di";
+import { SiAstro, SiVuetify } from "react-icons/si";
+import { FaVuejs } from "react-icons/fa6";
 import VueCommerce from "../assets/img/VueCommerce.webp";
 import Esland from "../assets/img/esland-clon.webp";
 import NetFlix from "../assets/img/Netflix-Clon.webp";
 import Acortador from "../assets/img/Acortador.webp";
-import { SiAstro } from "react-icons/si";
+import type { Proyecto } from "../type/types";
 
-export const proyectos = [
+export const proyectos: Array<Proyecto> = [
   {
     name: "VueCommerce",
     description:
