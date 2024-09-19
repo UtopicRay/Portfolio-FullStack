@@ -1,0 +1,31 @@
+---
+import IconEmail from "../assets/icons/IconEmail.astro";
+import IconGithub from "../assets/icons/IconGithub.astro";
+import IconLinkendin from "../assets/icons/IconLinkendin.astro";
+---
+  <footer class="flex justify-between items-center p-4 max-w-[1200px] place-items-center mx-auto mt-9">
+      <div>
+        <h2 class="text-gray-300 ">Ray Rendon</h2>
+        <div class="flex gap-2">
+          <a href="https://www.linkedin.com/in/ray-rendon-mesa-1948b7260">
+            <IconLinkendin class="text-white text-4xl hover:scale-125 transition-all duration-200 size-10"></IconLinkendin>
+          </a>
+          <a href="https://github.com/UtopicRay">
+            <IconGithub class="text-white text-4xl hover:scale-125 transition-all duration-200 size-10"></IconGithub>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center">
+          <a
+            class="flex justify-center items-center text-white  hover:scale-110 transition-all duration-200  underline"
+            href="mailto:rayrm2021@gmail.com?subject=Interesado%20en%20sus%20servicios"
+          >
+            rayrm2021@gmail.com
+            <span>
+              <IconEmail class="text-gray-500 text-4xl mx-2"></IconEmail>
+            </span>
+          </a>
+        </div>
+      </div>
+    </footer>

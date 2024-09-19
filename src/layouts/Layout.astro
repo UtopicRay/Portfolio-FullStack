@@ -21,30 +21,86 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+body {
+  background-color: #003285;
+}
+span,
+.bg-color-primary {
+  background-image: linear-gradient(to right, #7a0d8a, #c92085, #c68109);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.bg-color-primary {
+  background: linear-gradient(to right,#7a0d8a,#c92085,#c68109);
+}
+h2 {
+  @apply text-xl md:text-4xl text-[#FF7F3E] font-bold skew-x-6;
+}
+p {
+  @apply tracking-tight leading-relaxed text-white text-[1.1rem] text-left;
+}
+textarea,
+input {
+  @apply mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4;
+}
+.navbar{
+  @apply fixed top-0 p-5 w-full flex flex-wrap bg-white bg-opacity-20 backdrop-blur-2xl text-[#F9E8C9] justify-center items-center z-10;
+}
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(55, 55, 55, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  filter: blur(20);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 6px 10px 0 rgba(255, 255, 255, 0.37);
+}
+.list-item {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+.list-item:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.list-item:hover:after {
+  width: 100%;
+  left: 0;
+}
+.active-project{
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+}
+.active-project::after{
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0%;
+  height: 2px;
+  position: absolute;
+  background: pink;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 100%;
+}
 </style>
