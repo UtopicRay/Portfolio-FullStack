@@ -10,3 +10,8 @@ type Link = {
   site: string;
   github: string;
 };
+export type Titles = {
+  title: string;
+  image: ImageMetadata;
+  link: string;
+};

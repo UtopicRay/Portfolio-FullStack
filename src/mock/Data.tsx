@@ -68,3 +68,21 @@ export const proyectos: Array<Proyecto> = [
     ],
   },
 ];
+export const sections = [
+  {
+    name: "Sobre Mí",
+    id: "#about",
+  },
+  {
+    name: "Experiencia",
+    id: "#experiencia",
+  },
+  {
+    name: "Proyectos",
+    id: "#projects",
+  },
+  {
+    name: "Certificaciones",
+    id: "#certification",
+  },
+];

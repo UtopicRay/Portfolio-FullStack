@@ -6,9 +6,10 @@ import Hero from '../components/Hero.astro';
 import Proyectos from '../components/Proyectos';
 import Contacto from '../components/Contacto';
 import Footer from '../components/Footer.astro';
+import Titulos from '../components/Titulos.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portfolio-Fullstack">
 <div class="fixed left-0 top-0 -z-10 h-full w-full">
     <div class="absolute h-full w-full bg-black">
         <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
@@ -21,7 +22,8 @@ import Footer from '../components/Footer.astro';
 <section class="h-screen" id="about">
     <Experiencia />
 </section>
-<Proyectos client:visible>
+<Proyectos client:visible/>
+<Titulos/>
 </main>
 <Contacto client:visible/>
 <Footer/>

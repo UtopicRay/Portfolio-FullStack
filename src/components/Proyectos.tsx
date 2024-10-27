@@ -6,11 +6,10 @@ function Proyectos() {
   const [currentProject, setCurrentProject] = useState<number>(0);
   function handleClick(index: number) {
     setCurrentProject((prev) => (prev = index));
-    console.log(proyectos[currentProject]);
   }
   return (
     <section
-      className="my-24 max-w-[1200px] mx-auto grid md:grid-cols-8 grid-cols-2 gap-6"
+      className="md:my-24 mt-96 max-w-[1200px] mx-auto grid md:grid-cols-8 grid-cols-2 gap-6 relative"
       id="projects"
     >
       <div className="relative col-span-3 grid place-items-center grid-cols-1">
