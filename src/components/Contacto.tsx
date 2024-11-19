@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useContact } from "../hooks/useContact";
+import Button from "./Button";
 
 function Contacto() {
   const form = useRef<any>();
@@ -7,7 +8,7 @@ function Contacto() {
 
   return (
     <section
-      className="max-w-[1200px] mx-auto px-6 place-items-center"
+      className="max-container padding-container flex flex-col justify-center items-center"
       id="contact"
     >
       <h2>Comencemos a hablar!!</h2>
@@ -31,11 +32,7 @@ function Contacto() {
           required
         />
         <textarea name="message" className="my-2" />
-        <input
-          type="submit"
-          className="w-full font-semibold text-xl bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300"
-          value="Envie su mensaje"
-        />
+        <Button label="Envie su mensaje" type="submit" />
       </form>
       <div className="mx-auto px-6 place-items-center">
         {isLoading ? (
