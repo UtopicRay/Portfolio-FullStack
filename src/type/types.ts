@@ -1,9 +1,11 @@
+import type { ReactNode } from "react";
+
 export type Proyecto = {
   name: string;
   description: string;
   img: ImageMetadata;
   link: Link;
-  stack: Array<any>;
+  stack: Array<ReactNode>;
 };
 
 type Link = {
