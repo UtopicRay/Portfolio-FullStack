@@ -1,0 +1,18 @@
+---
+import Button  from './Button';
+import { Image } from 'astro:assets';
+
+interface Props{
+image:ImageMetadata;
+title:string;
+link:string;
+}
+const {image,title,link}=Astro.props
+---
+<div class="glass max-w-[600px] w-full h-auto pb-2 fade-down">
+<Image src={image} class='w-full max-h-56 md:max-h-96 rounded-lg' alt={`${title}_photo}`}/>
+<div class="flex justify-between items-center px-4 mt-3 py-2">
+<p class="mb-1 text-lg md:text-2xl font-semibold text-gray-900 dark:text-white">{title}</p>
+<Button label="Visitar" type="button" link={link}/>
+</div>
+</div>

@@ -1,9 +1,8 @@
 ---
-import { Image } from "astro:assets";
 import GitTitlePhoto from "../assets/img/Github.png";
 import IngTitlePhoto from "../assets/img/titulo.png";
 import type {Titles} from "../type/types";
-import Button from "./Button";
+import Titulo from "./Titulo.astro";
 const titulos:Array<Titles> = [
   {
     title: "Ing. en Ciencias Informáticas",
@@ -17,19 +16,13 @@ const titulos:Array<Titles> = [
   } ]
 ---
 <section
-  class="my-24 max-container padding-container "
+  class="py-16  md:py-24 max-container padding-container "
   id="certification"
 >
-<h2>Certificaciones</h2>c
+<h2 class="fade-down">Certificaciones</h2>c
 <div class="md:flex md:justify-center grid grid-cols-1 gap-6 w-full ">
 {titulos.map((titulo)=>(
-<div class="glass max-w-[600px] w-full h-auto pb-2">
-<Image src={titulo.image} class='w-full max-h-56 md:max-h-96 rounded-lg' alt={`${titulo.title}_photo}`}/>
-<div class="flex justify-between items-center px-4 mt-3 py-2">
-<p class="mb-1 text-lg md:text-2xl font-semibold text-gray-900 dark:text-white">{titulo.title}</p>
-<Button label="Visitar" type="button" link={titulo.link}/>
-</div>
-</div>
+<Titulo image={titulo.image} title={titulo.title} link={titulo.link}/>
 ))}
 </div>
 </section>
