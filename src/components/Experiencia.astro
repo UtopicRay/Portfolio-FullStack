@@ -14,13 +14,13 @@ import IconSymfony from "../assets/icons/IconSymfony.astro";
 import SvgSymfony from "../assets/icons/IconSymfony.svg";
 import Info from "./Info.astro";
 ---
-<div
-      class="max-w-[1200px] mx-auto text-left p-4 relative"
+<section
+      class="max-container padding-container text-left py-16 md:py-24 relative flex-col flex justify-center items-center"
       id="experiencia"
     >
-    <h2 class="col-span-2 w-full gap-8 text-center mb-10 text-4xl">Experiencia</h2>
-    <div class="grid md:grid-cols-2 grid-cols-1">
-    <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    <h2 class="my-10 fade-down">Experiencia</h2>
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-3 w-full">
+    <ol class="relative flex-col justify-between h-full border-s border-gray-200 dark:border-gray-700">
         <Info job="PROGRAMADOR WEB" institution="Ministerio de Relaciones Exteriores"
         time="2024-Actualidad"
         description={`Encargado de la creación de aplicaciones web escalables y de alto
@@ -28,12 +28,12 @@ import Info from "./Info.astro";
         Vuetify. Especializado en el desarrollo de interfaces de usuario
         intuitivas y responsivas para diversos servicios empresariales.`}
         >
-        <IconHtml class="text-orange-500 hover:scale-110 transition-all  duration-200 size-10 "/>
-        <IconCss class="text-blue-500 hover:scale-110 transition-all duration-200 size-10"/>
-        <IconJavaScript class="text-yellow-500 hover:scale-110 transition-all duration-200 size-10"/>
-        <IconGithub class="text-white hover:scale-110 transition-all duration-200 size-10"/>
-        <IconVue class=" text-green-500  hover:scale-110 transition-all duration-200 size-10"/>
-        <SiVuetify className="text-blue-500 hover:scale-110 transition-all duration-200 size-10" client:visible/>
+        <IconHtml class="text-orange-500 hover:scale-110 transition-all  duration-200 size-10 animate-duration-[300ms] fade-right"/>
+        <IconCss class="text-blue-500 hover:scale-110 transition-all duration-200 size-10 animate-duration-[350ms] fade-right"/>
+        <IconJavaScript class="text-yellow-500 hover:scale-110 transition-all duration-200 size-10 animate-duration-[400ms] fade-right"/>
+        <IconGithub class="text-white hover:scale-110 transition-all duration-200 size-10 animate-duration-[450ms] fade-right"/>
+        <IconVue class=" text-green-500  hover:scale-110 transition-all duration-200 size-10 animate-duration-[500ms] fade-right"/>
+        <SiVuetify className="text-blue-500 hover:scale-110 transition-all duration-200 size-10 animate-duration-[550ms] fade-right" client:visible/>
         </Info>
 
         <Info job="PRACTICANTE DE DESARROLLO" institution="Universidad de Ciencias Informática" time="2021 -2023"
@@ -42,17 +42,17 @@ import Info from "./Info.astro";
         datos. Durante ese periodo desarrolle una herramienta de búsqueda
         que mejoro los productos recomendados a los clientes mejorando así
         su experiencia.`}>
-        <IconHtml class="text-orange-500 hover:scale-110 transition-all  duration-200 size-10"></IconHtml>
-        <IconCss class="text-blue-500 hover:scale-110 transition-all duration-200 size-10"></IconCss>
-        <IconJavaScript class="text-yellow-500 hover:scale-110 transition-all duration-200 size-10"></IconJavaScript>
-        <IconReact class="text-blue-600 hover:scale-110 transition-all duration-200 size-10"></IconReact>
-        <IconGithub class="text-white hover:scale-110 transition-all duration-200 size-10"></IconGithub>
-        <IconPhp class="text-gray-300 hover:scale-110 transition-all duration-200 size-10"></IconPhp>
-        <IconSymfony class="text-gray-300 hover:scale-110 transition-all duration-200 size-10"/>
-        <IconDatabase class="text-blue-700 hover:scale-110 transition-all duration-200 size-10"></IconDatabase>
+        <IconHtml class="text-orange-500 hover:scale-110 transition-all  duration-200 size-10 fade-right animate-duration-[300ms]"></IconHtml>
+        <IconCss class="text-blue-500 hover:scale-110 transition-all duration-200 size-10 fade-right animate-duration-[350ms]"></IconCss>
+        <IconJavaScript class="text-yellow-500 hover:scale-110 transition-all duration-200 size-10 fade-right animate-duration-[400ms]"></IconJavaScript>
+        <IconReact class="text-blue-600 hover:scale-110 transition-all duration-200 size-10 fade-right animate-duration-[450ms]"></IconReact>
+        <IconGithub class="text-white hover:scale-110 transition-all duration-200 size-10 fade-right animate-duration-[500ms]"></IconGithub>
+        <IconPhp class="text-gray-300 hover:scale-110 transition-all duration-200 size-10 fade-right animate-duration-[550ms]"></IconPhp>
+        <IconSymfony class="text-gray-300 hover:scale-110 transition-all duration-200 size-10 fade-right animate-duration-[600ms]"/>
+        <IconDatabase class="text-blue-700 hover:scale-110 transition-all duration-200 size-10 fade-right animate-duration-[650ms]"></IconDatabase>
         </Info>
     </ol>
-    <div class="relative group z-10">
+    <div class="relative group z-10 fade-left">
       <div class="absolute -inset-1 place-items-center  w-full bg-gradient-to-r from-purple-100 to-orange-500 rounded-lg backdrop-blur-lg blur opacity-25 group-hover:opacity-100 transition-all duration-200"></div>
       <div class="relative p-4 h-full bg-white bg-opacity-25 backdrop-blur-lg rounded-lg">
         <Image
@@ -63,4 +63,4 @@ import Info from "./Info.astro";
       </div>
     </div>
     </div>
-    </div>
+    </section>
