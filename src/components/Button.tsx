@@ -9,7 +9,7 @@ export default function Button({ label, link, type }: ButtonProps) {
       {type === "button" ? (
         <button type="button">
           <a
-            className="bg-[#2A629A] px-4 py-2 rounded-lg text-xl lg:text-2xl text-gray-200 hover:bg-slate-700 duration-300 font-bold"
+            className="bg-[#2A629A] px-4 py-4 rounded-lg text-xl lg:text-2xl text-gray-200 hover:bg-slate-700 duration-300 font-bold"
             href={link}
           >
             {label}
