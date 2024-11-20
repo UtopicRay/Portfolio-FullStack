@@ -17,14 +17,28 @@ import Titulos from '../components/Titulos.astro';
     </div>
 </div>
 <Navbar client:visible/>
-<main>
-<Hero/>
-<section class="h-screen" id="about">
-    <Experiencia />
-</section>
+<main class="mx-auto w-full">
+<Hero client:visible/>
+<Experiencia />
 <Proyectos client:visible/>
 <Titulos/>
 </main>
 <Contacto client:visible/>
 <Footer/>
 </Layout>
+<script>
+import { inView } from "motion";
+
+inView('.fade-up',((element)=>{
+  element.target.classList.add("animate-fade-up")
+}))
+inView('.fade-right',((element)=>{
+  element.target.classList.add("animate-fade-right")
+}))
+inView('.fade-left',((element)=>{
+  element.target.classList.add("animate-fade-left")
+}))
+inView('.fade-down',((element)=>{
+  element.target.classList.add("animate-fade-down")
+}))
+</script>

@@ -36,12 +36,19 @@ span,
 .bg-color-primary {
   background: linear-gradient(to right,#7a0d8a,#c92085,#c68109);
 }
+.max-container {
+   @apply mx-auto max-w-[1440px];
+ }
+.padding-container {
+    @apply px-6 lg:px-20 2xl:px-0;
+}
 h2 {
-  @apply text-xl md:text-4xl text-[#FF7F3E] font-bold skew-x-6;
+    @apply text-center lg:text-6xl text-4xl text-[#FF7F3E] font-bold skew-x-6;
 }
 p {
   @apply tracking-tight leading-relaxed text-white text-[1.1rem] text-left;
 }
+
 textarea,
 input {
   @apply mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4;
