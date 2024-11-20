@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { sections } from "../../mock/Data";
 import "./Nabvar.css";
+import Button from "../Button";
 function Navbar() {
   const [nav, setNav] = useState(false);
   function handleNav() {
@@ -9,20 +10,19 @@ function Navbar() {
   }
   return (
     <header className="header top-0 p-5 w-full flex flex-wrap text-[#F9E8C9] md:justify-center items-center z-10 justify-end">
-      <ul className="md:flex gap-2 [&&>li]:px-5 hidden text-white font-bold text-xl">
+      <ul className="md:flex gap-2 [&&>li]:px-5 hidden text-white font-bold text-xl  py-5">
         {sections.map((section, index) => (
           <li key={index}>
-            <a href={section.id} className="list-item text-sm">
+            <a href={section.id} className="list-item text-lg">
               {section.name}
             </a>
           </li>
         ))}
+        <li className="md:block hidden">
+          <Button label="Contacto" link="#contact" type="button" />
+        </li>
       </ul>
-      <button className="md:block hidden bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300">
-        <a href="#contact" className="text-white font-bold">
-          Contact
-        </a>
-      </button>
+
       <div className="z-40 block md:hidden" onClick={handleNav}>
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
@@ -37,23 +37,15 @@ function Navbar() {
           <li key={index}>
             <a
               href={section.id}
-              className="list-item p-5 mt-10"
+              className="list-item p-5 mt-10 text-base"
               onClick={() => setNav(false)}
             >
               {section.name}
             </a>
           </li>
         ))}
-        <li className="p-5">
-          <button className="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300">
-            <a
-              href="#contact"
-              className="text-white font-bold"
-              onClick={() => setNav(false)}
-            >
-              Contact
-            </a>
-          </button>
+        <li className="p-5" onClick={() => setNav(false)}>
+          <Button label="Contacto" link="#contact" type="button" />
         </li>
       </ul>
     </header>
