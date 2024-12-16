@@ -8,7 +8,7 @@ import NetFlix from "../assets/img/Netflix-Clon.webp";
 import Winning from "../assets/img/Winning Landing.png";
 import NextTravel from '../assets/img/next-travel.webp';
 import type {Proyecto} from "../type/types";
-import {FcNext} from "react-icons/fc";
+import { RiNextjsLine } from "react-icons/ri";
 
 export const proyectos: Array<Proyecto> = [
   {
@@ -65,8 +65,7 @@ export const proyectos: Array<Proyecto> = [
       github: "https://github.com/UtopicRay/esland-clon",
     },
     stack: [
-      <SiAstro className="text-orange-500 text-4xl hover:scale-110 transition-all duration-200"/>,
-      <DiReact className="text-4xl text-blue-600 hover:scale-110 transition-all duration-200"/>,
+      <RiNextjsLine className="text-4xl text-blue-600 hover:scale-110 transition-all duration-200"/>,
       <RiTailwindCssFill className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200"/>,
     ],
   },
@@ -80,7 +79,8 @@ export const proyectos: Array<Proyecto> = [
       github: "https://github.com/UtopicRay/esland-clon",
     },
     stack: [
-        <FcNext className='text-4xl text-blue-300 hover:scale-110 transition-all duration-200'></FcNext>,
+         <SiAstro className="text-orange-500 text-4xl hover:scale-110 transition-all duration-200"/>,
+       <DiReact className="text-4xl text-blue-600 hover:scale-110 transition-all duration-200" />,
       <RiTailwindCssFill className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200"/>,
     ],
   },
