@@ -85,20 +85,6 @@ export const proyectos: Array<Proyecto> = [
     ],
   },
 ];
-
-/*{
-  name: "Acortador de URL y Generador de QR",
-      description:
-  "Servicio de Generador de QR y acortador de URL. Proyecto propio.",
-      img: Acortador,
-    link: {
-  site: "https://shorturlqr.000webhostapp.com/",
-      github: "https://github.com/UtopicRay/Acortador-Url-Generador-QR",
-},
-  stack: [
-    <DiPhp className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200"></DiPhp>,
-  ],
-},*/
 export const sections = [
   {
     name: "Sobre Mí",
