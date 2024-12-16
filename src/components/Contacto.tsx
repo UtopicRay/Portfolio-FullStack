@@ -11,7 +11,7 @@ function Contacto() {
       className="max-container padding-container flex flex-col justify-center items-center"
       id="contact"
     >
-      <h2>Comencemos a hablar!!</h2>
+      <h2 className="fade-down">Comencemos a hablar!!</h2>
       <form
         ref={form}
         onSubmit={sendEmail}
@@ -21,31 +21,25 @@ function Contacto() {
           type="text"
           name="from_name"
           placeholder="Su Nombre... "
-          className="my-2"
+          className="my-2 py-5"
           required
         />
         <input
           type="email"
           placeholder="example@gmail.com"
           name="from_email"
-          className="my-2"
+          className="my-2 py-5"
           required
         />
-        <textarea name="message" className="my-2" />
+        <textarea name="message" className="my-2 py-5" />
         <Button label="Envie su mensaje" type="submit" />
       </form>
-      <div className="mx-auto px-6 place-items-center">
-        {isLoading ? (
-          <h2 className="text-yellow-400  text-center">
-            ...Ejecutando peticion
-          </h2>
-        ) : (
-          ""
-        )}
-        {error ? <h2 className="text-red-400  text-center">{error}</h2> : ""}
+      <div className="mx-auto px-6 place-items-center mt-4">
+        {isLoading ? <Loading /> : ""}
+        {error ? <Error error={error} /> : ""}
         {status === "OK" ? (
           <h2 className="text-green-400 text-center">
-            Mensaje enviado via gmail
+            Mensaje enviado vía gmail
           </h2>
         ) : (
           ""
@@ -55,3 +49,12 @@ function Contacto() {
   );
 }
 export default Contacto;
+
+function Loading() {
+  return (
+    <h2 className="text-yellow-400  text-center">...Ejecutando peticion</h2>
+  );
+}
+function Error({ error }: { error: string }) {
+  return <h2 className="text-red-400  text-center">{error}</h2>;
+}

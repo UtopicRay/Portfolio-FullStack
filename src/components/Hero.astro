@@ -4,53 +4,54 @@ import {TypeAnimation} from 'react-type-animation';
 import { Image } from "astro:assets";
 import IconEmail from '../assets/icons/IconEmail.astro';
 import Habilidades from './Habilidades.astro';
+import  Button from './Button';
 ---
    <section
-      class="max-w-[1200px] mx-auto grid md:grid-cols-8 gap-6 p-10 md:p-0 mb-16 h-auto md:h-screen place-items-center"
+      class="max-container padding-container py-10  md:py-24  flex justify-center items-center"
       id="about"
     >
-      <div class="grid md:grid-cols-2 grid-cols-1 md:col-span-5 col-span-8 p-8 glass">
-        <div class="place-items-center">
-          <Image
-            class="md:max-w-full md:h-auto aspect-auto"
-            src={Avatar}
-            alt="imagen de Avatar"
-          />
-        </div>
-        <div class="mx-2 flex justify-center items-start flex-col">
-          <p class="text-xl md:text-3xl font-bold text-left">
-            Hola, soy Ray Rendón<br></br>
-            <span class="text-2xl font-bold text-left">
-              <TypeAnimation
-                sequence={[
-                  "Ing. Ciencias Informáticas",
-                  1000,
-                  "Desarrollador FullStack",
-                  1000,
-                ]}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-              client:visible></TypeAnimation>
+    <div class="grid md:grid-cols-8 gap-6 p-10 md:p-0 ">
+    <div class="grid md:grid-cols-2 grid-cols-1 md:col-span-5 col-span-8 p-8 glass fade-down">
+      <div class="place-items-center">
+        <Image
+          class="w-full md:h-[500px] max-w-full h-auto aspect-auto "
+          src={Avatar}
+          alt="imagen de Avatar"
+        />
+      </div>
+      <div class="mx-2 flex justify-between items-start flex-col gap-y-7 h-full">
+        <p class="text-xl lg:text-5xl font-bold text-left">
+          Hola, soy Ray Rendón<br></br>
+          <span class="xl:text-5xl 2xl:text-6xl text-3xl font-bold text-left [letter-spacing:0.15rem]">
+            <TypeAnimation
+              sequence={[
+                "Ing. Ciencias Informáticas",
+                1000,
+                "Desarrollador FullStack",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            client:visible></TypeAnimation>
+          </span>
+        </p>
+        <div class="flex flex-col gap-y-5 justify-start items-start">
+        <Button label="Descargar CV" type='button' link='https://drive.google.com/file/d/1_F307skOtnPWdSxpLtCzu9_ETlJIL81U/view?usp=sharing'/>
+        <div class="flex items-center">
+          <a
+            class="flex justify-center items-center text-white md:text-xl hover:scale-110 transition-all duration-200  underline"
+            href="mailto:rayrm2021@gmail.com?subject=Interesado%20en%20sus%20servicios"
+          >
+            rayrm2021@gmail.com
+            <span>
+              <IconEmail class="text-gray-500 mx-2"></IconEmail>
             </span>
-          </p>
-          <a href="https://drive.google.com/file/d/1_F307skOtnPWdSxpLtCzu9_ETlJIL81U/view?usp=sharing"target="_blank" download="Ray Rendón Mesa Currículum.pdf">
-            <button class="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300 mt-16 hover:scale-110">
-              Descargar CV
-            </button>
           </a>
-          <div class="flex md:justify-center justify-start items-center mt-4">
-            <a
-              class="flex text-white  hover:scale-110 transition-all duration-200 underline"
-              href="mailto:rayrm2021@gmail.com?subject=Interesado%20en%20sus%20servicios"
-            >
-              rayrm2021@gmail.com
-              <span>
-                <IconEmail class="text-gray-500 text-2xl mx-2"></IconEmail>
-              </span>
-            </a>
-          </div>
+        </div>
         </div>
       </div>
-     <Habilidades/>
+    </div>
+   <Habilidades/>
+    </div>
     </section>
