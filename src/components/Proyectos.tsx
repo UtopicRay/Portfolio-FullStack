@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import { proyectos } from "../mock/Data.tsx";
+import { useEffect, useState } from "react";
+import { proyectos } from "./Datos.tsx";
 import Card from "./Card.tsx";
 
 function Proyectos() {
   const [currentProject, setCurrentProject] = useState<number>(0);
   function handleClick(index: number) {
-    setCurrentProject((prev) => (prev = index));
+    setCurrentProject(index);
   }
   useEffect(() => {}, [currentProject]);
   return (

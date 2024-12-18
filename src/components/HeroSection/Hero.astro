@@ -1,0 +1,13 @@
+---
+import Habilidades from './Habilidades.astro';
+import PersonalInfo from './PersonalInfo';
+---
+   <section
+      class="max-container padding-container py-10  md:py-24  flex justify-center items-center"
+      id="about"
+    >
+       <div class="grid md:grid-cols-8 gap-6 p-10 md:p-0 ">
+           <PersonalInfo client:visible></PersonalInfo>
+           <Habilidades/>
+       </div>
+   </section>

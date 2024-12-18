@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { sections } from "../../mock/Data";
+import { sections } from "../Datos.tsx";
 import "./Nabvar.css";
 import Button from "../Button";
 function Navbar() {
