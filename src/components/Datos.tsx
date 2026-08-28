@@ -1,12 +1,13 @@
 import {RiFirebaseFill, RiNextjsLine, RiTailwindCssFill} from "react-icons/ri";
 import {DiReact} from "react-icons/di";
-import {SiAstro, SiVuetify} from "react-icons/si";
+import {SiAstro, SiVuetify, SiNextdotjs, SiPrisma, SiPostgresql, SiSupabase, SiGooglegemini, SiZod} from "react-icons/si";
 import {FaVuejs} from "react-icons/fa6";
 import VueCommerce from "../assets/img/VueCommerce.webp";
 import Esland from "../assets/img/esland-clon.webp";
 import NetFlix from "../assets/img/Netflix-Clon.webp";
 import Winning from "../assets/img/Winning Landing.png";
 import NextTravel from '../assets/img/next-travel.webp';
+import CvEvaluator from "../assets/img/cv-evaluator.webp";
 import type {Proyecto} from "../type/types.ts";
 
 export const proyectos: Array<Proyecto> = [
@@ -83,6 +84,26 @@ export const proyectos: Array<Proyecto> = [
             <SiAstro className="text-orange-500 text-4xl hover:scale-110 transition-all duration-200"/>,
             <DiReact className="text-4xl text-blue-600 hover:scale-110 transition-all duration-200"/>,
             <RiTailwindCssFill className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200"/>,
+        ],
+    },
+    {
+        name: "CVScore - CV Evaluator",
+        description:
+            "Plataforma de análisis de CV impulsada por IA (Google Gemini) que evalúa currículums en 7 dimensiones y los compara contra ofertas de empleo. Incluye dashboard con métricas, autenticación, subida de archivos y análisis de compatibilidad ATS.",
+        img: CvEvaluator,
+        link: {
+            site: "https://cv-evaluator-one.vercel.app/",
+            github: "https://github.com/UtopicRay/cv-evaluator",
+        },
+        stack: [
+            <SiNextdotjs className="text-4xl text-black hover:scale-110 transition-all duration-200"/>,
+            <DiReact className="text-4xl text-blue-600 hover:scale-110 transition-all duration-200"/>,
+            <RiTailwindCssFill className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200"/>,
+            <SiPrisma className="text-4xl text-indigo-600 hover:scale-110 transition-all duration-200"/>,
+            <SiPostgresql className="text-4xl text-blue-800 hover:scale-110 transition-all duration-200"/>,
+            <SiSupabase className="text-4xl text-green-600 hover:scale-110 transition-all duration-200"/>,
+            <SiGooglegemini className="text-4xl text-orange-500 hover:scale-110 transition-all duration-200"/>,
+            <SiZod className="text-4xl text-purple-600 hover:scale-110 transition-all duration-200"/>,
         ],
     },
 ];

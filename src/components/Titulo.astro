@@ -9,10 +9,12 @@ link:string;
 }
 const {image,title,link}=Astro.props
 ---
-<div class="glass max-w-[600px] w-full h-auto pb-2 fade-down">
-<Image src={image} class='w-full max-h-56 md:max-h-96 rounded-lg' alt={`${title}_photo}`}/>
-<div class="flex justify-between items-center px-4 mt-3 py-2">
-<p class="mb-1 text-lg md:text-2xl font-semibold text-blue-300 dark:text-white">{title}</p>
-<Button label="Visitar" type="button" link={link}/>
-</div>
+<div class="glass max-w-[600px] w-full h-full flex flex-col fade-down">
+  <div class="w-full aspect-[4/3] overflow-hidden rounded-t-lg">
+    <Image src={image} class="w-full h-full object-cover" alt={`${title}_photo`}/>
+  </div>
+  <div class="flex justify-between items-center gap-3 px-4 py-2 mt-auto">
+    <p class="mb-1 text-lg md:text-2xl font-semibold text-blue-300 dark:text-white">{title}</p>
+    <Button label="Visitar" type="button" link={link}/>
+  </div>
 </div>

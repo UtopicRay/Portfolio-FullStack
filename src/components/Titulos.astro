@@ -1,26 +1,31 @@
 ---
 import GitTitlePhoto from "../assets/img/Github.png";
 import IngTitlePhoto from "../assets/img/titulo.png";
+import CursoIA from "../assets/img/cursoIA.webp";
 import type {Titles} from "../type/types";
 import Titulo from "./Titulo.astro";
 const titulos:Array<Titles> = [
   {
     title: "Ing. en Ciencias Informáticas",
     image: IngTitlePhoto,
-    link: "",
+    link: "https://drive.google.com/file/d/1oE1Cn6trXxFVyZQ2XUX_00ZPk54z0M-Q/view?usp=sharing",
   },
   {
     title: "Bases de GIT, GITHUB",
     image: GitTitlePhoto,
-    link: "",
+    link: '../assets/img/GitHub.png',
+  },{
+    title: "Curso de Desarrollo con IA",
+    image: CursoIA,
+    link: "https://drive.google.com/file/d/1z2yveH-fyV5KT_6ADREc-JTy4xabPIwB/view?usp=drive_link",
   } ]
 ---
 <section
-  class="py-16  md:py-24 max-container padding-container "
+  class="py-16 md:py-24 max-container padding-container"
   id="certification"
 >
-<h2 class="fade-down">Certificaciones</h2>c
-<div class="md:flex md:justify-center grid grid-cols-1 gap-6 w-full ">
+<h2 class="fade-down">Certificaciones</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 items-stretch justify-center gap-6 w-full">
 {titulos.map((titulo)=>(
 <Titulo image={titulo.image} title={titulo.title} link={titulo.link}/>
 ))}

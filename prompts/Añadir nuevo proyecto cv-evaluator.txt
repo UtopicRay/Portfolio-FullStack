@@ -1,0 +1,7 @@
+Lo primero es crear una rama para poder trabajar la siguiente feature
+He creado un nuevo proyecto y es necesario reflejarlo en el portfolio. Para la realizar dicha tarea
+debes tener en cuenta el archivo types.ts ubicado en ./type. Una vez realizado debes revisar el proyecto
+ubicado en C:\Users\User\Documents\Proyectos\cv-evaluator y ir a ./src/components/Datos.tsx donde vas a crear un 
+nuevo objeto dentro de la constante proyectos con los datos obtenidos. Para el stack debes usar los iconos dentro de ./src/assets.
+En caso de ser necesario algun icono debes pedirlo.
+Una vez termines me debes avisar y en caso de todo estar bien realiza un git commit acorde a los cambios

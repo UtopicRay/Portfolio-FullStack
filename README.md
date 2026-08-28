@@ -1,54 +1,102 @@
-# Astro Starter Kit: Basics
+# Portfolio FullStack
 
-```sh
-npm create astro@latest -- --template basics
+Personal portfolio website built with Astro, React, and Tailwind CSS. Showcases projects, skills, experience, and provides a contact form.
+
+## 🎯 Project Intention
+
+This is a **full-stack developer portfolio** designed to:
+- Display professional projects with live demos and GitHub links
+- Highlight technical skills and technologies used
+- Present work experience and education
+- Enable visitors to contact via EmailJS integration
+- Demonstrate modern web development practices with Astro Islands architecture
+
+## 📁 Folder Structure
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
 ├── public/
-│   └── favicon.svg
+│   ├── favicon.svg
+│   └── book-2.svg
 ├── src/
+│   ├── assets/
+│   │   ├── icons/          # Technology icon components (Astro/React/Vue/etc.)
+│   │   └── img/            # Project screenshots and images
 │   ├── components/
-│   │   └── Card.astro
+│   │   ├── Navbar/         # Navigation with mobile hamburger menu
+│   │   │   ├── Navbar.tsx
+│   │   │   └── Nabvar.css
+│   │   ├── HeroSection/    # Landing section components
+│   │   │   ├── Hero.astro
+│   │   │   ├── PersonalInfo.tsx
+│   │   │   └── Habilidades.astro
+│   │   ├── Button.tsx      # Reusable button component
+│   │   ├── Card.tsx        # Project card display
+│   │   ├── Contacto.tsx    # Contact form with EmailJS
+│   │   ├── Datos.tsx       # Site data (sections, navigation)
+│   │   ├── Experiencia.astro
+│   │   ├── Footer.astro
+│   │   ├── Info.astro
+│   │   ├── Proyectos.tsx   # Projects grid
+│   │   ├── Titulo.astro
+│   │   └── Titulos.astro
+│   ├── hooks/
+│   │   └── useContact.ts   # EmailJS contact form hook
 │   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   │   └── Layout.astro    # Base layout with SEO meta
+│   ├── pages/
+│   │   └── index.astro     # Main page (single-page layout)
+│   ├── type/
+│   │   └── types.ts        # TypeScript type definitions
+│   └── env.d.ts            # Astro type declarations
+├── astro.config.mjs        # Astro configuration (React, Tailwind)
+├── tailwind.config.js      # Tailwind with animated plugin
+├── tsconfig.json           # TypeScript strict config
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠️ Technologies
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Core Framework
+- **Astro 5** - Static site generator with Islands architecture
+- **React 18** - Interactive components (client-side hydration)
+- **TypeScript** - Strict type checking (extends `astro/tsconfigs/strict`)
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Styling & UI
+- **Tailwind CSS 3** - Utility-first styling
+- **tailwindcss-animated** - Animation utilities
+- **Motion (Framer Motion)** - Complex animations
 
-## 🧞 Commands
+### Integrations & Services
+- **@astrojs/react** - React integration for Astro
+- **@astrojs/tailwind** - Tailwind integration
+- **@astrojs/check** - TypeScript checking during build
+- **@emailjs/browser** - Client-side email sending
+- **react-icons** - Icon library (Font Awesome, Material, etc.)
+- **react-type-animation** - Typing animation effects
 
-All commands are run from the root of the project, from a terminal:
+### Development
+- **Node.js** (ESM modules)
+- **npm** - Package manager
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🚀 Commands
 
-## 👀 Want to learn more?
+| Command | Action |
+|---------|--------|
+| `npm install` | Install dependencies |
+| `npm run dev` | Start dev server at `localhost:4321` |
+| `npm run build` | Type-check + production build to `./dist/` |
+| `npm run preview` | Preview production build locally |
+| `npm run astro` | Run Astro CLI commands |
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📦 Deployment
+
+Build output in `./dist/` can be deployed to any static hosting:
+- Vercel, Netlify, Cloudflare Pages, GitHub Pages, etc.
+
+## 🔧 Configuration Notes
+
+- **EmailJS credentials** are currently hardcoded in `src/hooks/useContact.ts` — should be moved to environment variables
+- **No test framework** configured
+- **No linting/formatting** scripts (follows Astro defaults)
+- **Main branch**: `master`
