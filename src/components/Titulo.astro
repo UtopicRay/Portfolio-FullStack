@@ -13,7 +13,7 @@ const {image,title,link}=Astro.props
   <div class="w-full aspect-[4/3] overflow-hidden rounded-t-lg">
     <Image src={image} class="w-full h-full object-cover" alt={`${title}_photo`}/>
   </div>
-  <div class="flex justify-between items-center gap-3 px-4 py-2 mt-auto">
+  <div class="flex justify-between items-center gap-3 px-4 py-5 mt-auto">
     <p class="mb-1 text-lg md:text-2xl font-semibold text-blue-300 dark:text-white">{title}</p>
     <Button label="Visitar" type="button" link={link}/>
   </div>
