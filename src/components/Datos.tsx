@@ -45,7 +45,7 @@ export const proyectos: Array<Proyecto> = [
     {
         name: "Winning Landing",
         description:
-            "Clon de la landing page de zentry con ligeros cambios personale",
+            "Landing page inspirada en Zentry (antes Guild of Guardians), una plataforma que une a jugadores de múltiples juegos y plataformas en una economía de juego unificada. Incluye hero section con video background interactivo y ciclo de videos al hacer clic, animaciones avanzadas con GSAP y ScrollTrigger, secciones de características, historia, descubrimiento y contacto. Proyecto propio con retoques personales.",
         img: Winning,
         link: {
             site: "https://winning-landing-page.vercel.app/",
@@ -55,6 +55,7 @@ export const proyectos: Array<Proyecto> = [
             <SiAstro className="text-orange-500 text-4xl hover:scale-110 transition-all duration-200"/>,
             <FaVuejs className=" text-green-500 text-4xl hover:scale-110 transition-all duration-200"/>,
             <RiTailwindCssFill className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200"/>,
+            <SiZod className="text-4xl text-purple-600 hover:scale-110 transition-all duration-200" title="GSAP" />,
         ],
     },
     {
