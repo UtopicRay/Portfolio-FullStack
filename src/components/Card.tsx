@@ -9,12 +9,13 @@ function Card({ proyecto }: { proyecto: Proyecto }) {
         <motion.div
           key={proyecto.name}
           layout
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.35, ease: "easeOut" }}
-          className="glass w-full col-span-5 [grid-area:1/1] hover:scale-105 duration-200 transition-all"
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.98 }}
+          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          className="[grid-area:1/1]"
         >
+          <div className="glass w-full col-span-5 hover:scale-[1.02] duration-300 transition-transform">
           <div className="w-full h-auto">
             <img
               src={proyecto.img.src}
@@ -37,6 +38,7 @@ function Card({ proyecto }: { proyecto: Proyecto }) {
                 ))}
               </div>
             </div>
+          </div>
           </div>
         </motion.div>
       </AnimatePresence>
